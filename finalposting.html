@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page4:Upload Post</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- Reset CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+            
+            
+            /* Imports
+            ------------------------------------------------*/
+            @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+            @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+            
+            
+            /* Tags
+            ------------------------------------------------*/
+            body{
+                background: -webkit-linear-gradient(#202020, black);
+                background: -moz-linear-gradient(#202020, black);
+                font-family: 'Luckiest Guy', cursive;
+                font-size: 14px;
+                letter-spacing: 1px;
+                color: white;
+            }
+            
+            h2{
+                margin: 15px 0;
+                font-size: 22px;
+                padding-bottom: 5px;
+                border-bottom: 5px #7676b5 solid;
+                letter-spacing: 1px;
+            }
+            
+            h3{
+                font-size: 18px;
+            }
+            
+            p{
+                font-family: 'Slabo 27px', serif;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+            
+            figure{
+                overflow: auto;
+                margin: 0;
+            }
+            
+            footer{
+                background: #171819;
+                padding: 40px 0;
+            }
+            
+            
+            /* Class
+            ------------------------------------------------*/
+            .container{
+                width: 80%;
+                margin: 0 auto;
+                overflow: auto;
+            }
+            
+            .text-center{
+                text-align: center;
+            }
+            
+            .text-right{
+                text-align: right;
+            }
+            
+            .clearfix{
+                clear: both;
+            }
+            
+            .btn-save{
+                background: black;
+                border: 1px black solid;
+                box-shadow: 0px 0px 10px #ffffcc;
+                font-family: 'Luckiest Guy', cursive;
+                font-size: 18px;
+                margin: 20px 20px 0 0;
+                padding: 5px 20px;
+                color: white;
+            }
+            
+            .btn-save:hover{
+                background-color: #202020;
+            }
+            
+            .black-wrapper{
+                margin: 2%;
+                background: black;
+                border-radius: 5px;
+                padding: 10px;
+                -webkit-box-shadow: 0px 0px 19px 0px #ffffcc;
+                -moz-box-shadow: 0px 0px 19px 0px #ffffcc;
+                box-shadow: 0px 0px 19px 0px #ffffcc;
+            }
+         
+
+            /* Header
+            ------------------------------------------------*/
+            header{
+                overflow: auto;
+                background: #0e0e0e;
+            }
+            
+            #logo-container{
+                float: left;
+                margin-top: 5px;
+            }
+            
+            #logo{
+                width: 100px;
+                height: 100px;
+            }
+            
+            #navigation{
+                float: left;
+                margin: 50px 0 0 30px;
+            }
+            
+            #navigation ul li:hover{
+                background-color: #202020;
+            }
+            
+            #navigation ul{
+                list-style: none;
+            }
+            
+            #navigation ul li{
+                margin: 0 10px 0 0;
+                padding:10px;
+                background-color: black;
+                box-shadow: 0px 0px 10px #ffffcc;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                text-align:center;
+                display: inline;
+            }
+            
+            #navigation ul li a{
+                text-decoration: none;
+                letter-spacing: 0.6px;
+                color: white;
+            }
+                 
+            #icon-container{
+                float: left;
+                margin: 35px 0 0 280px;
+            }
+   
+            #icon-container ul{
+                list-style: none;
+            }
+            
+            #icon-container ul li:hover{
+                cursor: pointer;   
+            }
+            
+            #icon-container ul li{
+                display: inline;
+                margin: 0 10px 0 0;
+            }
+
+            #icon-container ul li a{
+                color: white;
+                text-decoration: none;
+            }
+            
+           #search input[type="text"] {
+                background: url(images/mobile-icon-search.png) 8px 6px no-repeat #FFFFFF;
+                float: right;
+                margin-top: 40px;
+                border: 1px solid #000000;
+                font: bold 12px Arial,Helvetica,Sans-serif;
+                color: #000000;
+                width: 150px;
+                height: 20px;
+                padding: 6px 15px 6px 35px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+            }
+
+            
+            /* Banner
+            ------------------------------------------------*/
+            
+            #banner-container{
+                padding: 10px 0;
+            }
+            
+            .purple-bar-container{
+                position: relative;
+                float: left;
+                width: 31%;
+                height: 140px;
+            }
+            
+            .purple-bar-container .purple-bar{
+                position: absolute;
+                top: 70%;
+                margin-top: -5px;
+                height: 10px;
+                width: 100%;
+                background: #7676b5;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+            }
+            
+            #banner-img-container{
+                float:left;
+                width: 38%;
+            }
+            
+            #banner-img{
+                width: 100%;
+                height: auto;
+            }
+                
+            
+            /* First & Second Form
+            ------------------------------------------------*/
+            #first-form,
+            #second-form{
+                margin: 2% 10%;
+                background: #0e0e0e;
+                border-radius: 5px;
+                padding: 10px;
+                -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
+                -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
+                box-shadow: 0px 0px 20px 0px #ffffcc;
+            }
+            
+            
+            /* First Form
+            ------------------------------------------------*/
+            #inputs-container{
+                float: left;
+                width: 48%;
+                height: 240px;
+                margin-right: 2%;
+            }
+            
+            #inputs-container label{
+                display: block;
+                margin: 20px;
+            }
+            
+            #inputs-container label input{
+                background: black;
+                color: white;
+                border: 1px black solid;
+                margin: 0 0 0 20px;
+                float:right;
+                width: 70%;
+                box-shadow: 0px 0px 10px #ffffcc;
+            }
+            
+            #textarea-container{
+                float: right;
+                width: 48%;
+            }
+            
+            #text-area-container-p{
+                margin: 0 0 0 5%;
+            }
+            
+            #textarea{
+                display: block;
+                margin: 20px;
+            }
+            
+            #textarea-container textarea{
+                background: black;
+                color: white;
+                border: 1px black solid;
+                box-shadow: 0px 0px 10px #ffffcc;
+                width: 98%;
+                height: 90px;
+            }
+            
+            
+            /* Second Form
+            ------------------------------------------------*/   
+            #travel-checkbox-container{
+                float: left;
+                width: 48%;
+                margin-right: 2%;
+            }
+            
+            #travel-checkbox-container input,
+            #traveler-checkbox-container input{
+                margin: 10px 20px 10px 0;
+            }
+            
+            #traveler-checkbox-container{
+                float: right;
+                width: 48%;
+                margin-left: 2%;
+                padding: 45px 0 0 0;
+            }
+            
+            
+            /* Footer
+            ------------------------------------------------*/
+            #address{
+                float: left;
+                width: 50%;
+                height: auto;
+                font-family: 'Slabo 27px', serif;
+            }
+            
+            #social-icons{
+                float: right;
+                width: 50%;
+                text-align: right;
+            }
+            
+            #social-icons li{
+                display: inline;
+            }
+            
+            #copyright{
+                text-align: center;
+                clear: both;
+                font-family: 'Slabo 27px', serif;
+            }
+            
+            #social-icons li a{
+                text-decoration: none;
+                color: white;
+            }
+            
+             /* Media Queries
+            ------------------------------------------------*/
+           @media screen and (max-width: 1240px){
+                   
+                #logo-container{
+                    float: none;
+                    text-align: center;
+                }
+                
+                #inputs-container label input{
+                    float: left;
+                    width: 100%;
+                    margin: 3%;}
+                
+                #navigation{
+                    float: none;
+                    text-align: center;   
+                    margin-top: 20px;
+                }
+                
+                #icon-container{
+                    float: none;
+                    display: inline;
+                    text-align: center;
+                }
+                
+                #icon-container ul{
+                    margin-top: 15px;
+                }
+                
+                #search input[type="text"]{
+                    float: none;
+                    width: 300px;
+                    text-align: center;    
+                    margin-left: 30%;
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+                }
+                
+                #inputs-container{
+                    float: none;
+                    height: 290px;
+                }
+               
+               .btn-save{
+                    margin-top: -30px;
+                    margin-bottom: 10px;
+                }
+            }
+            
+            
+            @media screen and (max-width: 1100px){
+         
+                .container{
+                    width:90%;
+                }
+                
+                #inputs-container label{
+                    display: block;
+                    width: 550px;
+                }
+            }  
+
+            @media screen and (max-width: 900px){
+  
+                #first-form,
+                #second-form{
+                    margin-bottom: 4%;
+                }
+
+                #inputs-container{
+                    float: none;
+                    width: 100%;
+                    height: 300px;
+                }
+                
+                #inputs-container label{
+                    display: block;
+                    width: 400px;
+                }
+                
+                #textarea-container{
+                    float: none;
+                    width: 100%;
+                }    
+                
+                .btn-save{
+                    margin-top: -20px;
+                    margin-bottom: 10px;
+                }
+            }
+            
+            @media screen and (max-width: 800px){
+             
+                #search input[type="text"]{
+                    width: 150px;
+                    margin-left: 30%;
+                }
+                
+                .purple-bar-container{
+                    display: none;
+                }
+                
+                #banner-img-container{
+                    float: none;
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+            
+            @media screen and (max-width: 700px){
+                
+                #inputs-container label{
+                    display: block;
+                    width: 230px;
+                }
+                
+                #travel-checkbox-container{
+                    float: none;
+                    width: 100%;
+                    margin-right: 2%;
+                    padding: 10px 0 0 0;
+                }
+                
+                #traveler-checkbox-container{
+                    float: none;
+                    width: 100%;
+                    margin-left: 0%;
+                    padding: 10px 0 0 0;
+                }
+            }
+            
+            @media screen and (max-width: 500px){
+               
+                #navigation ul li{
+                    padding:5px;
+                }
+                
+                #navigation ul li a{
+                    font-size: 12px;
+                }
+
+                #search input[type="text"]{
+                    width: 150px;
+                    margin-left: 20%;
+                }
+                
+                #inputs-container label{
+                    display: block;
+                    width: 200px;
+                }
+            } 
+            
+            
+        </style>  
+    </head>
+
+    
+    <body>
+        <!------------------------------------------------>
+        <header>
+            <div class="container">
+
+                <!-- Logo -->
+                <div id="logo-container">
+                    <img id="logo" src="images/logo.png">
+                </div>
+
+
+                <!-- Navigation -->
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Catagories</a></li>
+                        <li><a href="finalposting.html">Post</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons -->
+                <div id="icon-container">
+                    <ul>
+                        <li><a href="finalcreateaccount.html"><i class="fa fa-user fa-3x"></i></a></li>
+                        <li><i class="fa fa-bell fa-3x" onclick="myFunction()"></i></li>
+                        <li><a href="finalindividualpost.html"><i class="fa fa-file-o fa-3x"></i></a></li>
+                    </ul>
+                </div>
+                <form method="get" action="http://www.google.com" id="search">
+                    <input name="" type="text" size="40" placeholder="Search..."/>
+                </form>
+            </div> 
+            <div class="clearfix"></div>
+        </header>
+        
+        
+        <!------------------------------------------------>        
+        <!-- Banner --> 
+        <div id="banner-container">
+            
+            <div class="container">
+                <div class="purple-bar-container">
+                    <div class="purple-bar">&nbsp;</div>
+                </div>
+                
+                <div id="banner-img-container">
+                    <img id="banner-img" src="images/banner.png">
+                </div>
+                
+                <div class="purple-bar-container">
+                    <div class="purple-bar">&nbsp;</div>
+                </div>
+            </div>
+            
+        <div class="clearfix"></div>    
+        </div>
+        
+        
+        <!------------------------------------------------>    
+        <!-- First Form -->
+        <div id="first-form">
+            <div class="container">
+                <form>
+                    <div id="inputs-container">
+                        <h2>Content</h2>
+                        <label>Email: <input type="email"></label>
+                        <label>Name: <input type="text"></label>
+                        <label>Date: <input type="date"></label>
+                        <label>Location: <input type="text"></label>  
+                    </div>
+                    
+                    <div id="textarea-container">
+                        <div class="submit-button text-right">
+                            <input type="submit" class="btn-save" value="Save">
+                        </div>
+                    </div>
+                </form>
+            </div>  
+        </div>
+        <div class="clearfix"></div>
+        
+        
+        <!------------------------------------------------>  
+        <!-- Second Form -->
+        <div id="second-form">
+            <div class="container">
+                <form>
+                    <div id="travel-checkbox-container">
+                        <h2>Your Information</h2>
+                        <p>Please choose all the option that best describes you.</p>
+                        
+                    <div class="black-wrapper">
+                        <h3>Types of Travel</h3>
+                        <input type="checkbox" name="travel" value="Text Here">The Weekend Break<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Package Holiday<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Group Tour<br>
+                        <input type="checkbox" name="travel" value="Text Here">RV Road Trip<br>
+                        <input type="checkbox" name="travel" value="Text Here">Long Term / Slow Travel<br>
+                        <input type="checkbox" name="travel" value="Text Here">Visiting Relatives / Friends<br>
+                    </div>
+                    </div>
+                    
+                    <div id="traveler-checkbox-container">
+                        <div class="submit-button text-right">
+                            <input type="submit" class="btn-save" value="Save">
+                        </div>
+                        
+                    <div class="black-wrapper">
+                        <h3>Types of Traveler</h3>
+                        <input type="checkbox" name="travel" value="Text Here">The Techie<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Planner<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Chiller<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Budgeter<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Know-It-All<br>
+                        <input type="checkbox" name="travel" value="Text Here">The Reapter<br>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+       <!------------------------------------------------>  
+        <!-- Footer -->
+<footer>
+            <div class="container">
+                <div id="address">
+                    3700 Willingdon Ave, Burnaby, BC V5G<br>
+                    astro-adventures.ca<br>
+                    (604) 778-0000
+                </div>
+
+                 <ul id="social-icons">
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-square fa-3x"></i></a></li>
+                </ul>
+                
+                <div id="copyright">
+                    All rights reserved.
+                </div>
+            </div>
+        </footer>
+    
+        
+        <script>
+            function myFunction() {
+            alert("3 New Posts");
+            }
+        </script>
+         
+        
+    </body>
+</html>
