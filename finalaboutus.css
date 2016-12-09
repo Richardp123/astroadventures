@@ -229,8 +229,8 @@ margin-bottom: 5%}
            
 #social-icons2{
                 
-                width: 14%;
-                text-align: right;}
+                width: 50%;
+                text-align: left;}
             
             #social-icons2 li{
                 display: inline;}
@@ -274,26 +274,63 @@ margin-bottom: 5%}
            
            /* Media Queries
             ------------------------------------------------*/
-            @media screen and (max-width: 800px){
+          @media screen and (max-width: 1000px){
+#search input[type="text"]{
+                       float: none;
+                }
+                #conty p { font-size: 25px;}
                 
-                #b
-               
-                #logo-container{
-                    float: none;
-                    text-align: center;}
+}
+    @media screen and (max-width: 900px){
+                #search{
+                    text-align: center;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                }
                 
-                #navigation{
+                #search input[type="text"]{
                     float: none;
-                    text-align: center;}
+                    width: 310px;
+                }
+@media screen and (max-width: 800px){
+                 #logo-container{
+                    float: none;
+                    text-align: center;
+                    margin: 5px 0 0 0;
+                }
+     #navigation{
+                    float: none;
+                    text-align: center;    
+                }
                 
                 #navigation ul{
                     width: 100%;
-                    margin: -20px 0 0 0;}
+                    margin: -15px 0 0 0;
+                }
                 
                 #icon-container{
                     float: none;
+                    display: inline;
                     text-align: center;
-                    padding: 5px 0 20px 0;}
+                    padding: 10px 0 20px 0;
+                }
+                
+                #icon-container ul{
+                    margin-top: 10px;
+                }
+                
+                 #search{
+                    text-align: center;
+                    margin-top: -25px;
+                    margin-bottom: 20px;
+                }
+              
+                .purple-bar-container{
+                    display: none;
+                }
+                
+                #b
+               
                 
                 .purple-bar-container{
                     display: none;}
@@ -318,10 +355,11 @@ margin-bottom: 5%}
                     margin: 10px 0;
                     font-size: 12px;}
             }
+                    #conty p { font-size: 20px;}
             
             @media screen and (max-width: 500px){
            
-             
+             #conty p { font-size: 15px;}
                 
                 #icon-container{
                     float: none;
@@ -342,3 +380,38 @@ margin-bottom: 5%}
                     color: white;
                     box-shadow: 0px 0px 10px #ffffcc;}
             }
+        
+         #navigation ul li{
+                    margin: 0 5px 0 0;
+                    padding:5px;
+                    background-color: black;
+                    box-shadow: 0px 0px 10px #ffffcc;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    border-radius: 30px;
+                    text-align:center;
+                    display: inline;
+                }
+                
+                 #navigation ul li a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 12px;
+                }
+                
+                #icon-container{
+                    float: none;
+                    text-align: center;
+                    padding: 0 0 20px 0;
+                }
+                
+                #search{
+                    margin-top: -20px;
+                    margin-right: 10px;
+                }
+                
+                #search input[type="text"]{
+                    
+                    width: 150px;
+                }
+                

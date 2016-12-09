@@ -216,7 +216,7 @@ margin-bottom: 5%;
                 box-shadow: 0px 0px 20px 0px #ffffcc;}
 
 .astro-search form input {
-    width:500px;
+    width:400px;
                 margin-left: 30%;
                 -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
@@ -295,13 +295,28 @@ height:200px}
             ------------------------------------------------*/
             @media screen and (max-width: 1300px){
                 
+                        .astro-search form input {
+    width:200px;
+                margin-left: 30%;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+    
+}
                 #bobby {width: 300px;
 height:150px}
 }
            /* Media Queries
             ------------------------------------------------*/
             @media screen and (max-width: 800px){
-                
+                .astro-search form input {
+    width:100px;
+                margin-left: 30%;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+    
+}
                 #bobby {width: 200px;
 height:100px}
                
@@ -330,6 +345,16 @@ height:100px}
                     width: 30%;
                     margin: 0 auto;}
             }
+ #icon-container{
+                    float: none;
+                    display: inline;
+                    text-align: center;
+                    padding: 10px 0 20px 0;
+                }
+                
+                #icon-container ul{
+                    margin-top: 10px;
+                }
             
             @media screen and (max-width: 700px){
                 
@@ -348,6 +373,14 @@ height:100px}
             
             @media screen and (max-width: 500px){
            
+                 .astro-search form input {
+    width:50px;
+                margin-left: 20%;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+    
+}
                 #navigation ul li{
                     margin: 0 5px 0 0;
                     padding:5px;

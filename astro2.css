@@ -16,7 +16,9 @@
                 letter-spacing: 1px;
                 color: white;
             }
-            
+h1{
+    font-size: 50px;
+}
             h2{
                 margin: 15px 0;
                 font-size: 22px;
@@ -46,6 +48,11 @@
             ------------------------------------------------*/
             .container{
                 width: 80%;
+                margin: 0 auto;
+            }
+
+.container1{
+                width: 100%;
                 margin: 0 auto;
             }
             
@@ -233,11 +240,13 @@
                 width: 80%;
                 margin-right: 10%;
             }
-            
+           
+/*
             #widget > div,
             #widget > article{
                 margin-bottom: 30px;
             }
+*/
             
             /* More Photos */
             #slider-container {
@@ -259,7 +268,7 @@
                 bottom: 10px;
                 z-index: -10;
             }
-.atop h1 { font-size: 3em;
+.atop h1 { 
 margin-bottom: 10%}
 
 .atop{
@@ -296,7 +305,7 @@ margin-bottom: 10%}
                 color: white;
             }
 
-            
+     
             .img:before {
                 position: absolute;
                 margin-top: 0;
@@ -362,17 +371,19 @@ padding:20px;
                 box-shadow: 0px 0px 20px 0px #ffffcc;      
 }
 
-#conty h1 { font-size: 3em;
+#conty h1 { 
 text-align: center}
 #conty p { font-size: 2em;}
             
             /* Destination */
             #map-container{
-                position: relative;
+                float: left;
                 margin-top: 2%;
+                margin-bottom: 20px;
+                width: 40%;
                 background: #0e0e0e;
                 border-radius: 5px;
-                padding: 10px;
+                padding: 10px 10px 20px 10px;
                 -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
                 -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
                 box-shadow: 0px 0px 20px 0px #ffffcc;
@@ -394,32 +405,43 @@ text-align: center}
                 text-decoration: none;
             }
 
+#map-container ul li:hover{
+                background-color: #202020;
+            }
 .pony2{
                 color: white;
                 text-decoration: none;
             }
             
+#recommended-posts-container ul li:hover{
+                background-color: #202020;
+            }
 
 #popost {font-size: 3em;
 margin 2%;
 text-align: center}
 
 #olympus {
-    width: 400px;
+    width: 250px;
+
 }
             
             /* Recommended Posts */
             #recommended-posts-container{
                margin-top: 2%;
+                float: right;
+        
+                width: 40%;
                 margin-left: 10%;
                 background: #0e0e0e;
                 border-radius: 5px;
-                padding: 10px;
+    
+                padding: 10px 10px 50px 10px;
                 -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
                 -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
                 box-shadow: 0px 0px 20px 0px #ffffcc;
             }
-#bobby {width: 400px}
+#bobby {width: 250px}
 #recommended-posts-container ul li{
                 
                 padding:10px;
@@ -441,14 +463,14 @@ text-align: center}
           
             
             /* Secondary Content
-            ------------------------------------------------*/
+        ------------------------------------------------*/
 #flexy {
     display: flex;
     flex-direction: row;
     justify-content: center
 }
 
-            
+     
             /* Footer
             ------------------------------------------------*/
             #footer-font{
@@ -521,7 +543,12 @@ text-align: center}
                 color: white;
             }
 
-
+                       .atop{
+    text-align: center;
+    margin-right: 120px;
+        
+}
+                }
            /* Media Queries
             ------------------------------------------------*/
             @media screen and (max-width: 1100px){
@@ -533,12 +560,7 @@ text-align: center}
     margin-top: 21%;
     margin-left: 12%;
     padding: 30px;
-    -webkit-border-radius: 20px;
-                -moz-border-radius: 20px;
-                border-radius: 20px;
-     -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
-             -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
-                box-shadow: 0px 0px 20px 0px #ffffcc;
+  
         
 }
 .atop ul li{
@@ -560,16 +582,39 @@ text-align: center}
                 color: white;
             }
 
+                #map-container{
+                float: none;
+                margin-top: 2%;
+                width: 100%;
+                   
+                }
                 
+                #recommended-posts-container{
+               margin-top: 2%;
+                    margin-left: 0%;
+                float: none;
+        
+                width: 100%;
+                }
                  
                 #search input[type="text"]{
                        float: none;
                 }
                 
             @media screen and (max-width: 900px){
-                #icon-container:hover{
-                    float: none;
+                               .atop{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    float: left;
+    margin-top: 21%;
+    margin-right: 50px;
+    padding: 30px;
                 }
+                
+  #conty p { font-size: 25px;}
+                }
+  
+           
                 
                 #search{
                     text-align: center;
@@ -589,6 +634,23 @@ text-align: center}
                     margin: 5px 0 0 0;
                 }
                 
+       #map-container{
+       
+             
+                width: 80%;
+                    
+                }
+                
+                   #recommended-posts-container{
+               
+                float: none;
+        
+                width: 80%;
+                       margin-bottom: 20px;
+                }
+                h1{
+                    font-size: 30px;
+                }
                 #navigation{
                     float: none;
                     text-align: center;    
@@ -615,11 +677,8 @@ text-align: center}
                     margin-top: -25px;
                     margin-bottom: 20px;
                 }
-              
-                .purple-bar-container{
-                    display: none;
-                }
-                
+     
+    
                 #banner-img-container{
                     float: none;
                     width: 30%;
@@ -678,13 +737,7 @@ text-align: center}
                     
                     width: 150px;
                 }
-                
-                #banner-img-container{
-                    float: none;
-                    width: 50%;
-                    margin: 0 auto;
-                } 
-                
+            
                 form input{
                     margin-left: 10px;
                     height: 20px;
