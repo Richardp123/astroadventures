@@ -177,66 +177,19 @@
     flex-direction: row;
     flex-wrap: wrap;
         margin-bottom: 5%;
-}
-#recommended-posts-container ul li a{
-                text-decoration: none;
-                letter-spacing: 0.6px;
-                color: white;
-            }
-
-.firebird {
-    font-size: 3em;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 30%;
-    text-align: center;
-    background-color: black;
-                box-shadow: 0px 0px 10px #ffffcc;
-                -webkit-border-radius: 20px;
-                -moz-border-radius: 20px;
-                border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
-                -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
-                box-shadow: 0px 0px 20px 0px #ffffcc;
-    
-}
- /* Recommended Posts */
-.astro-search {display: flex;
-    background-color: black;
-    padding: 30px;
-margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left:20%;
-    width:50%;
--webkit-border-radius: 20px;
-                -moz-border-radius: 20px;
-                border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
-                -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
-                box-shadow: 0px 0px 20px 0px #ffffcc;}
-
-.astro-search form input {
-    width:500px;
-                margin-left: 30%;
-                -webkit-border-radius: 20px;
-                -moz-border-radius: 20px;
-                border-radius: 20px;
-    
-}
-
-.astro-search h1 {
-    font-size: 2em;
-   
-        margin-left: 10%;
+    width:80%;
+    align-content: center;
+    margin-left: 10%
 }
 
 
 
-            #recommended-posts-container{
-               margin-top: 5%;
-                width: 30%;
-                margin-left: 9%;
-                margin-right: 9%;
+        #main-post{
+                
+     margin-top: 5%;
+                height: 800px;
+      
+             
                 background: #0e0e0e;
                 border-radius: 5px;
                 padding: 10px;
@@ -244,22 +197,48 @@ margin-bottom: 5%;
                 -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
                 box-shadow: 0px 0px 20px 0px #ffffcc;
             }
-#bobby {width: 400px;
-height:200px}
-#recommended-posts-container ul li{
-                
-                padding:10px;
-                background-color: black;
-                box-shadow: 0px 0px 10px #ffffcc;
-                -webkit-border-radius: 20px;
+            
+            #main-post img{
+                width: 100%;
+            }
+#main-post {
+    background: url("images/saturna.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#conty{
+   
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+padding:20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
                 border-radius: 20px;
-                text-align:center;
-                display: inline;
-    
-    
-            }
+     -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
+                -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
+                box-shadow: 0px 0px 20px 0px #ffffcc;      
+}
+
+#conty h1 { font-size: 3em;
+text-align: center;
+margin-bottom: 5%}
+#conty p { font-size: 2em;}
             
+           
+#social-icons2{
+                
+                width: 14%;
+                text-align: right;}
+            
+            #social-icons2 li{
+                display: inline;}
+            
+            
+            #social-icons2 li a{
+                text-decoration: none;
+                color: white;}
 
            
             
@@ -291,19 +270,13 @@ height:200px}
                 color: white;}
             
             
-/* Media Queries
-            ------------------------------------------------*/
-            @media screen and (max-width: 1300px){
-                
-                #bobby {width: 300px;
-height:150px}
-}
+
+           
            /* Media Queries
             ------------------------------------------------*/
             @media screen and (max-width: 800px){
                 
-                #bobby {width: 200px;
-height:100px}
+                #b
                
                 #logo-container{
                     float: none;
@@ -348,21 +321,7 @@ height:100px}
             
             @media screen and (max-width: 500px){
            
-                #navigation ul li{
-                    margin: 0 5px 0 0;
-                    padding:5px;
-                    background-color: black;
-                    box-shadow: 0px 0px 10px #ffffcc;
-                    -webkit-border-radius: 30px;
-                    -moz-border-radius: 30px;
-                    border-radius: 30px;
-                    text-align:center;
-                    display: inline;}
-                
-                 #navigation ul li a{
-                    text-decoration: none;
-                    color: white;
-                    font-size: 12px;}
+             
                 
                 #icon-container{
                     float: none;
