@@ -47,6 +47,9 @@
             .clearfix{
                 clear: both;}
             
+            .contacter ul li{
+                font-family:'Slabo 27px', serif; 
+            }
 
              /* Header
             ------------------------------------------------*/
@@ -170,26 +173,19 @@
 
             /* Widget
             ------------------------------------------------*/
-            
+            .flexcolumn1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-bottom: 5%;
+                width:80%;
+                align-content: center;
+                margin-left: 10%
+            }
 
-.flexcolumn1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-        margin-bottom: 5%;
-    width:80%;
-    align-content: center;
-    margin-left: 10%
-}
-
-
-
-        #main-post{
-                
-     margin-top: 5%;
+            #main-post{
+                margin-top: 5%;
                 height: 800px;
-      
-             
                 background: #0e0e0e;
                 border-radius: 5px;
                 padding: 10px;
@@ -201,50 +197,51 @@
             #main-post img{
                 width: 100%;
             }
-#main-post {
-    background: url("images/saturna.jpg") no-repeat center center;
-    background-size: cover;
-}
 
-#conty{
-   
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-padding:20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    -webkit-border-radius: 20px;
+            #main-post {
+                background: url("images/saturna.jpg") no-repeat center center;
+                background-size: cover;
+                width: auto;
+                height: 600px;
+            }
+
+            #conty{
+                margin-top: 8%;
+                margin-left: 8%;
+                margin-right: 8%;
+                margin-bottom: 8%;
+                padding:20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
                 border-radius: 20px;
-     -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
+                -webkit-box-shadow: 0px 0px 20px 0px #ffffcc;
                 -moz-box-shadow: 0px 0px 20px 0px #ffffcc;
                 box-shadow: 0px 0px 20px 0px #ffffcc;      
-}
+            }
 
-#conty h1 { font-size: 3em;
-text-align: center;
-margin-bottom: 5%}
-#conty p { font-size: 2em;}
-            
-           
-#social-icons2{
-                
+            #conty h1 { 
+                font-size: 3em;
+                text-align: center;
+                margin-bottom: 5%}
+
+            #conty p { font-size: 20px;}
+             
+            #social-icons2{
                 width: 50%;
                 text-align: left;}
             
             #social-icons2 li{
                 display: inline;}
-            
-            
+                        
             #social-icons2 li a{
                 text-decoration: none;
                 color: white;}
 
-           
-            
+ 
             /* Footer
             ------------------------------------------------*/
- #footer-font{
+            #footer-font{
                 font-family: 'Slabo 27px', serif;
                 color: white;
             }
@@ -269,19 +266,15 @@ margin-bottom: 5%}
                 text-decoration: none;
                 color: white;}
             
-            
-
-           
+  
            /* Media Queries
             ------------------------------------------------*/
-          @media screen and (max-width: 1000px){
-#search input[type="text"]{
+            @media screen and (max-width: 1000px){
+                #search input[type="text"]{
                        float: none;
                 }
-                #conty p { font-size: 25px;}
                 
-}
-    @media screen and (max-width: 900px){
+            @media screen and (max-width: 900px){
                 #search{
                     text-align: center;
                     margin-top: 40px;
@@ -292,13 +285,20 @@ margin-bottom: 5%}
                     float: none;
                     width: 310px;
                 }
-@media screen and (max-width: 800px){
+                
+                #main-post{
+                    height: 850px;
+            }
+                }
+
+            @media screen and (max-width: 800px){
                  #logo-container{
                     float: none;
                     text-align: center;
                     margin: 5px 0 0 0;
                 }
-     #navigation{
+                
+                #navigation{
                     float: none;
                     text-align: center;    
                 }
@@ -329,9 +329,6 @@ margin-bottom: 5%}
                     display: none;
                 }
                 
-                #b
-               
-                
                 .purple-bar-container{
                     display: none;}
                 
@@ -354,12 +351,13 @@ margin-bottom: 5%}
                 #comments li{
                     margin: 10px 0;
                     font-size: 12px;}
+    
+                #conty p { font-size: 20px;}
             }
-                    #conty p { font-size: 20px;}
-            
+    
             @media screen and (max-width: 500px){
            
-             #conty p { font-size: 15px;}
+                #conty p { font-size: 15px;}
                 
                 #icon-container{
                     float: none;
@@ -379,9 +377,8 @@ margin-bottom: 5%}
                     border: 1px white solid;
                     color: white;
                     box-shadow: 0px 0px 10px #ffffcc;}
-            }
         
-         #navigation ul li{
+                #navigation ul li{
                     margin: 0 5px 0 0;
                     padding:5px;
                     background-color: black;
@@ -407,11 +404,11 @@ margin-bottom: 5%}
                 
                 #search{
                     margin-top: -20px;
-                    margin-right: 10px;
+                    margin-left: 10px;
                 }
                 
                 #search input[type="text"]{
                     
                     width: 150px;
                 }
-                
+        }
